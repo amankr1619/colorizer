@@ -33,4 +33,10 @@ img{
     border-radius: 16px;
     object-fit: cover;
 }
+:hover {
+    transition: transform 0.5s; 
+    -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2); 
+  }
 `
