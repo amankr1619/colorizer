@@ -25,6 +25,7 @@ align-items: center;
 box-sizing: border-box;
 cursor: pointer;
 width: 236px;
+transition: 0.5s;
 
 img{
     display: flex;
@@ -32,11 +33,17 @@ img{
     cursor: zoom-in;
     border-radius: 16px;
     object-fit: cover;
+    opacity: 0.9;
 }
 :hover {
+    z-index: 2;
     transition: transform 0.5s; 
     -ms-transform: scale(1.2); 
     -webkit-transform: scale(1.2); 
     transform: scale(1.2); 
+  }
+ :hover img{
+      opacity: 1;
+      box-shadow: 0px 2px 20px #f8e0e4;
   }
 `
