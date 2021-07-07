@@ -7,16 +7,12 @@ import Header from "./components/Header";
 import Mainboard from "./components/Mainboard";
 import unsplash from "./api/unsplash";
 import "./Mainboard.css";
-import { colorizer } from "./api/deepai";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Following from "./components/Following";
+import ImageUpload from "./components/ImageUpload";
 
 function App() {
-    // console.log("start...");
-    // colorizer();
-    // console.log("done...");
 
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("dark");
 
     const themeToggler = () => {
         theme === "light" ? setTheme("dark") : setTheme("light");
@@ -70,7 +66,7 @@ function App() {
 
     useEffect(() => {
         getNewPins();
-    }, []);
+    });
 
     return (
         <Router>
@@ -81,7 +77,7 @@ function App() {
                 <Switch>
                     <Route path="/following">
                         {console.log("following page")}
-                        <Following />
+                        <ImageUpload />
                     </Route>
                     <Route path="/">
                         {console.log("homepage")}

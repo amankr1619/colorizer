@@ -3,10 +3,7 @@ import styled from "styled-components";
 import ToysIcon from "@material-ui/icons/Toys";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import TextsmsIcon from "@material-ui/icons/Textsms";
 import FlareIcon from "@material-ui/icons/Flare";
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 const Header = (props) => {
     const [input, setInput] = useState("");
@@ -35,7 +32,7 @@ const Header = (props) => {
                 <a href="/">Homepage</a>
             </HomePageButton>
             <FollowingButton>
-                <a href="/following">Following</a>
+                <a href="/following">Colorizer</a>
             </FollowingButton>
             <SearchWrapper>
                 <SearchBarWrapper>
@@ -52,21 +49,12 @@ const Header = (props) => {
                 </SearchBarWrapper>
             </SearchWrapper>
             <IconsWrapper>
-                <IconButton style={{ color: "#fe98a8" }}>
-                    <NotificationsIcon />
-                </IconButton>
-                <IconButton>
-                    <TextsmsIcon style={{ color: "#fe98a8" }} />
-                </IconButton>
                 <IconButton
                     type="button"
                     onClick={themeToggler}
                     style={{ color: "#fe98a8" }}
                 >
                     <FlareIcon />
-                </IconButton>
-                <IconButton>
-                    <KeyboardArrowDownIcon style={{ color: "#881c12" }} />
                 </IconButton>
             </IconsWrapper>
         </Wrapper>
